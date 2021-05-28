@@ -104,6 +104,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="15dp"
+                app:cornerRadius="15dp"
+                android:backgroundTint="#00FFFF"
+                android:textColor="@color/black"
                 android:drawableLeft="@drawable/ic_action_edit"
                 android:text="Edit"/>
 
@@ -113,7 +116,10 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
+                app:cornerRadius="15dp"
+                android:backgroundTint="#FF0000"
                 android:drawableLeft="@drawable/ic_action_remove"
+                android:textColor="@color/black"
                 android:text="Remove"/>
         </LinearLayout>
     </LinearLayout>

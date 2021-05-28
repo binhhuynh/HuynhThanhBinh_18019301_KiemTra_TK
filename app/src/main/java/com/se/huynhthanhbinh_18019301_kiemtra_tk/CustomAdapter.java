@@ -26,7 +26,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public CustomAdapter(List<Tablet> tabletList, Activity context) {
         this.tabletList = tabletList;
         this.context = context;
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -40,33 +39,26 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
         Tablet tablet = tabletList.get(position);
+        Toast.makeText(context, "" + tablet, Toast.LENGTH_SHORT).show();
 
         holder.tvName.setText(tablet.getName());
         holder.tvBrand.setText(tablet.getBrand());
         holder.tvOperatingSystem.setText(tablet.getOperatingSystem());
         holder.tvScreenSize.setText(String.valueOf(tablet.getScreenSize()));
 
-        holder.btnRemove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Tablet t = tabletList.get(holder.getAdapterPosition());
+        holder.btnRemove.setOnClickListener(view -> {
+            Tablet t = tabletList.get(holder.getAdapterPosition());
 
-                RequestQueue queue = Volley.newRequestQueue(context);
-                String url = "https://60ad9c2b80a61f0017331458.mockapi.io/api/" + t.getId();
+            RequestQueue queue = Volley.newRequestQueue(context);
+            String url = "https://60ad9c2b80a61f0017331458.mockapi.io/api/tablets/" + t.getId();
 
-                StringRequest stringRequest = new StringRequest(Request.Method.DELETE, url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
-                    }
-                }, error -> Toast.makeText(context, "Can't deleted", Toast.LENGTH_SHORT).show());
+            StringRequest stringRequest = new StringRequest(Request.Method.DELETE, url, response -> Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show(), error -> Toast.makeText(context, "Can't deleted", Toast.LENGTH_SHORT).show());
 
-                queue.add(stringRequest);
+            queue.add(stringRequest);
 
-                tabletList.remove(position);
-                notifyItemRemoved(position);
-                notifyItemRangeChanged(position, tabletList.size());
-            }
+            tabletList.remove(position);
+            notifyItemRemoved(position);
+            notifyItemRangeChanged(position, tabletList.size());
         });
     }
 

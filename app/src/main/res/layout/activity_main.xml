@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
-        android:text="LOGIN"
+        android:text="LOGIN FORM"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,9 +67,12 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        app:cornerRadius="15dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#008080"
         android:text="LOGIN"
         app:layout_constraintEnd_toEndOf="@+id/etPassword"
         app:layout_constraintStart_toStartOf="@+id/etPassword"
