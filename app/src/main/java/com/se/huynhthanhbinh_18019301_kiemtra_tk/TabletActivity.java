@@ -70,7 +70,6 @@ public class TabletActivity extends AppCompatActivity {
                 tablet.setOperatingSystem(etOS.getText().toString());
                 tablet.setScreenSize(Double.parseDouble(etScreenSize.getText().toString()));
                 addTablet(tablet);
-                getTablets();
             }
         });
     }
