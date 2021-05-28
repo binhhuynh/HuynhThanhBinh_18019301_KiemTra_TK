@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316633581878",
+    "project_id": "tablet-management-project",
+    "storage_bucket": "tablet-management-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316633581878:android:3f97f8acc67c2445058b97",
+        "android_client_info": {
+          "package_name": "com.se.huynhthanhbinh_18019301_kiemtra_tk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316633581878-u9doqsr9elhrt3pjuh0robg5repe5m6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7oTcKH62bKhx15jCMk5e7LktoHRkGPd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316633581878-u9doqsr9elhrt3pjuh0robg5repe5m6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
