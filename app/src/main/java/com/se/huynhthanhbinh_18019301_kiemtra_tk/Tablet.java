@@ -2,18 +2,20 @@ package com.se.huynhthanhbinh_18019301_kiemtra_tk;
 
 public class Tablet {
     private int id;
+    private String name;
     private String brand;
     private String operatingSystem;
     private double screenSize;
 
-    public Tablet(int id, String brand, String operatingSystem, double screenSize) {
+    public Tablet() {
+    }
+
+    public Tablet(int id, String name, String brand, String operatingSystem, double screenSize) {
         this.id = id;
+        this.name = name;
         this.brand = brand;
         this.operatingSystem = operatingSystem;
         this.screenSize = screenSize;
-    }
-
-    public Tablet() {
     }
 
     public int getId() {
@@ -22,6 +24,14 @@ public class Tablet {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getBrand() {
@@ -52,6 +62,7 @@ public class Tablet {
     public String toString() {
         return "Tablet{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", brand='" + brand + '\'' +
                 ", operatingSystem='" + operatingSystem + '\'' +
                 ", screenSize=" + screenSize +
