@@ -1,6 +1,8 @@
 package com.se.huynhthanhbinh_18019301_kiemtra_tk;
 
-public class Tablet {
+import java.io.Serializable;
+
+public class Tablet implements Serializable {
     private int id;
     private String name;
     private String brand;

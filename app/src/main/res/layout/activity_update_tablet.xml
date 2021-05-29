@@ -62,7 +62,7 @@
         />
 
     <Button
-        android:id="@+id/btnAddTablet"
+        android:id="@+id/btnUpdate"
         android:layout_marginHorizontal="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
